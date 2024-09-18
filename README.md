@@ -1,16 +1,103 @@
-# Story-Recorder-Bot
-This is a story recorder bot that calls people with Twilio phone number and ask questions and record answers, and generate questions based on answers up to 10 questions.
-You call a number who you want to record story from and our bot will take responsibility of the call completely.
+# 📞 Story Quilt Bot Voice Application
 
-Enjoy it yourself!
+Welcome to the **Story Quilt Bot Voice Application**! This FastAPI-based project enables you to make voice calls, transcribe the audio, and generate follow-up questions using the Twilio and OpenAI APIs.
 
-# How-To-Run
-1. Copy .env.example file and name it as .env.
-2. Set values in .env file.
-3. Create virtual environment and activate it.
-4. Install libraries with ```pip install -r requirements.txt```
-5. Run the Twilio webhook server with ```python app.py```
-6. Open main.py file and change the server ```url``` and ```to``` value as you want.
-   Note: Server must be accessible through the internet.
-7. Make a phone call using ```python main.py```
-8. Answer a call and follow the guide as the bot says.
+## 📄 Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## 🌟 Overview
+
+This application allows you to make calls to users, ask them a set of pre-defined questions to record a story, and then transcribe their responses using OpenAI's Whisper API. It also intelligently generates follow-up questions based on the transcribed text to gather more information.
+
+## ✨ Features
+
+- **Automated Calls:** Initiates calls to users with pre-defined questions.
+- **Voice Transcription:** Uses OpenAI's Whisper API to transcribe recorded responses.
+- **Dynamic Question Generation:** Generates follow-up questions based on the initial responses.
+- **Twilio Integration:** Seamlessly integrates with Twilio for voice call functionalities.
+- **User Interaction:** Engages users through interactive voice responses.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following:
+
+- Python 3.6 or later installed.
+- Twilio account and API keys.
+- OpenAI API key.
+- `dotenv` package configured with necessary environment variables.
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/your-username/story-quilt-bot
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```sh
+   cd story-quilt-bot
+   ```
+
+3. **Create and activate a virtual environment:**
+
+   - On Windows:
+     ```sh
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```sh
+     python -m venv venv
+     source venv/bin/activate
+     ```
+
+4. **Install the required packages:**
+
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+### Configuration
+
+Create a `.env` file in the root directory with the following environment variables:
+
+- `TWILIO_ACCOUNT_SID`
+- `TWILIO_AUTH_TOKEN`
+- `TWILIO_PHONE_NUMBER`
+- `OPENAI_API_KEY`
+
+## 🎉 Usage
+
+Once installed and configured, you can start the application to make calls and transcribe responses. Customize the set of pre-defined questions and the generation of follow-up questions to fit your needs.
+
+## 🤝 Contributing
+
+Contributions make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
+
+## 📜 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+Happy coding! 🚀
+```
+
+This `README.md` file is designed to be user-friendly and attractive, highlighting the key aspects of your project without diving into the code.
